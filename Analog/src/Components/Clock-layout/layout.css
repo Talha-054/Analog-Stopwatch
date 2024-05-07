@@ -1,0 +1,208 @@
+
+.container {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 5vh;
+}
+
+
+
+
+
+
+
+.clock-layout-area {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    display: none;
+    margin-bottom: 5vh;
+   
+    
+   
+    
+} 
+
+
+.layout-button {
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    border: 1px solid whitesmoke;
+    animation: glow2 4s linear 500ms infinite alternate both;
+    background-color: #FA7070;
+
+}
+
+
+
+
+.clock-layout-button-container {
+    position: relative;
+    width: 25vw;
+    margin: auto;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    box-shadow: -1px -1px 1px  rgb(212, 203, 203) ; 
+    min-width: 130px;      
+}
+
+
+.box {
+    position: relative;
+    word-wrap: break-word;
+    width: 5vw;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+    margin: 0.5rem;
+    transition: 150ms linear;
+   
+}
+
+
+ 
+
+
+
+
+
+.box:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.box1 {
+    background-image: url("./assets/clock/clock.png");
+    background-size: cover;
+    backdrop-filter: blur(50px);
+}
+
+.box2 {
+    background-image: url("./assets/clock/clock2.png");
+    background-size: cover;
+}
+
+.box3 {
+    background-image: url("./assets/clock/clock4.png");
+    background-size: cover;
+}
+
+.box4 {
+    background-image: url("./assets/clock/clock5.png");
+    background-size: cover;
+}
+
+.box5 {
+    background-image: url("./assets/clock/clock6.png");
+    background-size: cover;
+    backdrop-filter: blur(50px);
+}
+
+.box6 {
+    background-image: url("./assets/clock/clock7.png");
+    background-size: cover;
+}
+
+.box7 {
+    background-image: url("./assets/clock/clock8.png");
+    background-size: cover;
+}
+
+.box8 {
+    background-image: url("./assets/clock/clock9.png");
+    background-size: cover;
+}
+
+.box9 {
+    background-image: url("./assets/clock/clock10.png");
+    background-size: cover;
+}
+
+.box10 {
+    background-image: url("./assets/clock/clock11.png");
+    background-size: cover;
+}
+
+.box11 {
+    background-image: url("./assets/clock/clock12.png");
+    background-size: cover;
+}
+
+.box4:hover + .dc {
+    background-image:  url("./assets/clock/clock5.png");
+}
+
+
+
+
+
+.hide {
+    animation: fadeOut 500ms cubic-bezier(0, 0, 0, 0.96) 1 forwards;
+}
+.unhide {
+    display: flex;
+    animation: fadeIn 500ms cubic-bezier(0, 0, 0, 0.96) 1 forwards;
+}
+
+
+
+
+
+@keyframes fadeOut {
+    0%{
+        transform: scale(1);
+        display: flex;
+    }
+    
+    100%{
+        opacity: 0;
+        transform: scaleX(0);
+        display: none;
+        box-shadow: 0px 0px 100px whitesmoke;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scaleX(0);
+        
+        
+    }
+  
+    100% {
+        transform: scaleX(1);
+        opacity: 0.5;
+        
+    }
+}
+
+
+
+
+.dc {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/clock/clock.png");
+    border-radius: 50%;
+    background-size: 100% 100%;
+    background-position: center;
+    margin: auto;
+}

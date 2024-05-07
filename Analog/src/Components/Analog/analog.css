@@ -1,0 +1,302 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    
+    background-size: 100% 100%;
+    background-position: center;
+    /* background-image: linear-gradient(135deg, #536976 10%, #292E49 100%); */
+    background-image: url("./bg.jpg");
+    height: 100vh;
+ 
+    
+}
+
+
+.dc-main-container {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5vh;
+    
+    
+    
+}
+
+.dc-container {
+    height: 40%;
+    min-width: 150px;
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 2rem;
+    animation: glow 4s linear 500ms infinite alternate both;
+    opacity: 08;
+    flex-shrink: 0;
+}
+
+.dc {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/clock/clock.png");
+    border-radius: 50%;
+    background-size:100% 100%;
+    background-position: center;
+    background-color: #FEFDED;
+    position: relative;
+    margin: auto;
+    backdrop-filter: blur(50px);
+    
+    
+
+}
+
+.second-hand {
+    height: 60%;
+    aspect-ratio: 1/20;
+    position: absolute;
+    left: 49.5%;
+    top: 22%;
+    
+    border-radius: 50px 50px 0px 0px;
+    background-image: url("./assets/hand/mint3.png"); 
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.minute-hand {
+
+    height: 60%;
+    aspect-ratio: 1/14;
+    position: absolute;
+    left: 49%;
+    top: 22%;
+    background-image: url("./assets/hand/min-hand.png");
+    background-size: cover;
+    background-position: center;
+   
+  
+}
+
+.mili-sec-hand {
+    height: 30%;
+    aspect-ratio: 1/20;
+    position: absolute;
+    left: 50%;
+    top: 22%;
+    transform-origin: bottom;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 1px 5px red; 
+    opacity: 0.5;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.start-button {
+    height: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    animation: glow2 4s linear 500ms infinite alternate both;
+    border: none;
+    border: 1px solid whitesmoke;
+    background-color: #f80000;
+}
+
+
+
+.stop-button {
+    height: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    animation: glow2 4s linear 500ms infinite alternate both;
+    border: 1px solid whitesmoke;
+    background-color: #f80000;
+}
+
+.reset-button {
+    height: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    border: 1px solid whitesmoke;
+    animation: glow2 4s linear 500ms infinite alternate both;
+    background-color: #f80000;
+}
+
+.start-button:hover,
+.stop-button:hover,
+.reset-button:hover,
+.choice:hover,
+.layout-button:hover {
+    transform: scale(1.15);
+    animation-play-state: paused;
+    cursor: pointer;
+    transition: all 100ms linear;
+}
+
+
+
+
+
+.button-area {
+    display: flex;
+    padding: 0.5rem;
+    position: relative;
+    width: 80%;
+    height: auto;
+    justify-content: space-evenly;
+    border-radius: 25%;
+    box-shadow: -1px -1px 1px  rgb(212, 203, 203) ;
+    margin: 1rem;
+    display: none;
+    position: relative;
+ 
+}
+
+.choice-area {
+   
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 25%;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    box-shadow: -1px -1px 1px  rgb(212, 203, 203) ;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 264.5px;
+   
+}
+
+.choice {
+    padding: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    border: 1px solid whitesmoke;
+    animation: glow2 4s linear 500ms infinite alternate both;
+    background-color: #FA7070;
+}
+
+
+
+
+
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {box-shadow: 0px 0px 20px rgb(253, 1, 1);}
+    25% {box-shadow: 0px 0px 20px rgb(243, 227, 4);}
+    50% {box-shadow: 0px 0px 20px rgb(114, 231, 5);}
+    75% {box-shadow: 0px 0px 20px rgb(3, 245, 245);}
+    100% {box-shadow: 0px 0px 20px rgb(194, 3, 252);}
+}
+
+@keyframes glow2 {
+    0% {box-shadow: 0px 0px 20px rgb(5, 0, 0);}
+    100% {box-shadow: 0px 0px 10px rgb(129, 5, 129);}
+}
+
+
+
+
+
+@keyframes fadeOut {
+    0%{
+        transform: scale(1);
+        display: flex;
+    }
+    
+    100%{
+        opacity: 0;
+        transform: scaleX(0);
+        display: none;
+        box-shadow: 0px 0px 100px whitesmoke;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scaleX(0);
+        
+        
+    }
+  
+    100% {
+        transform: scaleX(1);
+        opacity: 0.5;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+.second-hand-animation {
+    animation: rotate 60s linear infinite forwards;
+}
+
+.minute-hand-animation {
+    animation: rotate 3600s linear infinite forwards;
+}
+
+.mili-sec-hand-animation {
+    animation: rotate 1000ms linear infinite forwards;
+}
+
+.pause-animation {
+    animation-play-state: paused;
+}
+
+.play-animation {
+    animation-play-state: running;
+}
+
+
+.hide {
+    animation: fadeOut 500ms cubic-bezier(0, 0, 0, 0.96) 1 forwards;
+}
+.unhide {
+    display: flex;
+    animation: fadeIn 500ms cubic-bezier(0, 0, 0, 0.96) 1 forwards;
+}
+
+

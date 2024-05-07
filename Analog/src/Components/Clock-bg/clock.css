@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.clock-bg-container {
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+.sample {
+    width: 15%;
+    aspect-ratio: 1/1;
+    background-image: url("./assets/clock/clock.png");
+    border-radius: 50%;
+    background-size:100% 100%;
+    background-position: center;
+    position: relative;
+    margin: auto;
+    animation: glow 4s linear 500ms infinite alternate both;
+    backdrop-filter: blur(50px);
+    
+}
+
+@media (max-width:1000px){
+    .sample{
+        width: 40%;
+    }
+}

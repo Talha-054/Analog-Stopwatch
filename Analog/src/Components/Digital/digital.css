@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.digital-c-container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+h1 {
+    color: black
+    
+}
+
+p {
+    display: inline;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 380px){
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
